@@ -1,0 +1,14 @@
+<p>heroes works!</p>
+<!-- <div><span>ID: {{HEROES[0].id}}</span></div>
+<div><span>Name: {{HEROES[0].name}}</span></div>
+<div>
+  <label>name: </label>
+  <input [(ngModel)] = "heroDetails.name">
+</div> -->
+
+<ul class = "heroes">
+  <li *ngFor = "let hero of HEROES" (click) = "onSelect(hero)">
+    <span>{{hero.name}}</span>
+  </li>
+</ul>
+<h2 *ngIf = "selectedHero">Selected Hero: {{selectedHero.name}}</h2>
